@@ -1,3 +1,3 @@
 # MEARN STACK APP
 
-## Stack: React, Node.js and MongoDB
+## Stack: React.js Express.js, Node.js and MongoDB

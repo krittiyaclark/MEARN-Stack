@@ -12,7 +12,7 @@ const NewPlace = () => {
         type="text"
         label="Title"
         validators={[]}
-        // onChange={}
+        errorText="Please enter a valid title."
       />
     </form>
   );
