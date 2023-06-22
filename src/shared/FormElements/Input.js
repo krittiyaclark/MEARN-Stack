@@ -31,11 +31,13 @@ const Input = ({
   errorText,
   validators,
   onInput,
+  initialValue,
+  initialValid,
 }) => {
   const [inputState, dispatch] = useReducer(inputReducer, {
-    value: "",
+    value: initialValue || "",
     isValid: false,
-    isTouched: false,
+    isTouched: initialValid || false,
   });
 
   const { value, isValid } = inputState;
