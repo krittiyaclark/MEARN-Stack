@@ -36,10 +36,14 @@ export const PlaceItem = ({
       </Modal>
       <li className="place-item">
         <Card className="place-item__content">
-          <img src={image} alt={title} />
-          <h2>{title}</h2>
-          <h3>{address}</h3>
-          <p>{description}</p>
+          <div className="place-item__image">
+            <img src={image} alt={title} />
+          </div>
+          <div className="place-item__info">
+            <h2>{title}</h2>
+            <h3>{address}</h3>
+            <p>{description}</p>
+          </div>
           <div className="place-item__actions">
             <Button inverse onClick={openMapHandler}>
               VIEW ON MAP

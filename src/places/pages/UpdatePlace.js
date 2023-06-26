@@ -6,6 +6,7 @@ import {
   VALIDATOR_MINLENGTH,
 } from "../../shared/util/validators";
 import Button from "../../shared/FormElements/Button";
+import Card from "../../shared/FormElements/Button";
 
 import "./PlaceForm.css";
 import { useForm } from "../../shared/hooks/form-hook";
@@ -56,34 +57,34 @@ const UpdatePlace = () => {
     false
   );
 
-  const indentifiredPlace = DUMMY_PLACES.find((p) => p.id === placeId);
+  const identifiedPlace = DUMMY_PLACES.find((p) => p.id === placeId);
 
   useEffect(() => {
     setFormData(
       {
         title: {
-          value: indentifiredPlace.title,
+          value: identifiedPlace.title,
           isValid: true,
         },
         description: {
-          value: indentifiredPlace.description,
+          value: identifiedPlace.description,
           isValid: true,
         },
       },
       true
     );
     setIsLoading(false);
-  }, [setFormData, indentifiredPlace]);
+  }, [setFormData, identifiedPlace]);
 
   const placeUpdateSubmitHandler = (event) => {
     event.preventDefault();
     console.log(formState.inputs);
   };
 
-  if (!indentifiredPlace) {
+  if (!identifiedPlace) {
     return (
       <div className="center">
-        <h2>Could not find place!</h2>
+        <Card>Could not find place!</Card>
       </div>
     );
   }
