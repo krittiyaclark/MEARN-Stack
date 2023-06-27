@@ -35,7 +35,7 @@ const formReducer = (state, action) => {
 
 export const useForm = (initialInputs, initialFormValidity) => {
   const [formState, dispatch] = useReducer(formReducer, {
-    // Inputs is a nested object that stores information about the validity of indivodual inputs
+    // Inputs is a nested object that stores information about the validity of individual inputs
     inputs: initialInputs,
     isValid: initialFormValidity,
   });
