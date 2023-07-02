@@ -18,11 +18,12 @@ const App = () => {
 
   const login = useCallback(() => {
     setIsLoggedIn(true);
-  });
+  }, []);
 
   const logout = useCallback(() => {
     setIsLoggedIn(false);
-  });
+  }, []);
+
   let routes;
 
   if (isLoggedIn) {
@@ -49,8 +50,8 @@ const App = () => {
         <Route path="/" exact>
           <Users />
         </Route>
-        <Route path="/places/:placeId">
-          <UpdatePlace />
+        <Route path="/userd/places">
+          <UserPlaces />
         </Route>
         <Route path="/auth">
           <Auth />
